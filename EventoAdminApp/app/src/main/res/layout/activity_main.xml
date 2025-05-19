@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".layouts.MainActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Gerenciamento de Evento"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/input_text_color"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Botão Adicionar Evento -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAdicionarEvento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Evento"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_add_event"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="@android:color/white"
+        app:backgroundTint="@color/button_color"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:cornerRadius="12dp"
+        android:contentDescription="Adicionar novo evento"/>
+
+    <!-- Botão Registrar Entrada -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonEntrada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Registrar Entrada"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_entry"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="@android:color/white"
+        app:backgroundTint="@color/button_color"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonAdicionarEvento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:cornerRadius="12dp"
+        android:contentDescription="Registrar entrada no evento"/>
+
+    <!-- Botão Registrar Saída -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSaida"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Registrar Saída"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_exit"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="@android:color/white"
+        app:backgroundTint="@color/button_color"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonEntrada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:cornerRadius="12dp"
+        android:contentDescription="Registrar saída do evento"/>
+
+    <!-- Botão Administrar Evento -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAdministrarEvento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Administrar Evento"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_manage_event"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="@android:color/white"
+        app:backgroundTint="@color/button_color"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonSaida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:cornerRadius="12dp"
+        android:contentDescription="Administrar eventos"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

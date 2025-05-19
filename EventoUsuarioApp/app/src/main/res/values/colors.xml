@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+        <color name="input_background">#F0F0F0</color>
+        <color name="input_border_color">#CCCCCC</color>
+        <color name="button_background">#3F51B5</color>
+
+        <color name="azul_escuro">#00008B</color> <!-- Azul Escuro -->
+        <color name="roxo">#800080</color>        <!-- Roxo -->
+        <color name="azul_claro">#ADD8E6</color>  <!-- Azul Claro -->
+        <color name="rosa_claro">#FFC0CB</color>  <!-- Rosa Claro -->
+
+</resources>

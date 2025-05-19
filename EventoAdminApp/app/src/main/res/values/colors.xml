@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores Básicas -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Cores de Fundo e Texto -->
+    <color name="background_color">#FFFFFF</color>
+    <color name="input_text_color">#000000</color>
+    <color name="input_background">#F0F0F0</color>
+    <color name="input_border_color">#CCCCCC</color>
+
+    <!-- Cores de Botão -->
+    <color name="button_background">#3F51B5</color>
+    <color name="button_color">#6200EE</color> <!-- Roxo Padrão -->
+    <color name="button_color_dark">#3700B3</color> <!-- Roxo Escuro -->
+
+    <!-- Cores Secundárias -->
+    <color name="secondary_color">#03DAC5</color> <!-- Teal -->
+    <color name="secondary_color_dark">#018786</color> <!-- Teal Escuro -->
+</resources>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollViewAdicionarEvento"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/mainLayoutAdicionarEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/textViewTituloAdicionarEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adicionar Novo Evento"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/input_text_color"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Campo para Nome do Evento -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutNomeEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeColor="@color/button_color"
+            app:boxStrokeWidth="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextNomeEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome do Evento"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/input_text_color"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo para Data do Evento -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutDataEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeColor="@color/button_color"
+            app:boxStrokeWidth="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDataEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data (dd/mm/yyyy)"
+                android:inputType="date"
+                android:padding="12dp"
+                android:textColor="@color/input_text_color"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo para Descrição do Evento -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutDescricaoEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeColor="@color/button_color"
+            app:boxStrokeWidth="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDescricaoEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descrição do Evento"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:maxLines="6"
+                android:padding="12dp"
+                android:textColor="@color/input_text_color"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- CheckBox para definir limite de participantes -->
+        <CheckBox
+            android:id="@+id/checkBoxLimiteParticipantes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Definir limite de participantes"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Campo para definir o número máximo de participantes -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutMaxParticipantes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:visibility="gone"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeColor="@color/button_color"
+            app:boxStrokeWidth="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextMaxParticipantes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Número máximo de participantes"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColor="@color/input_text_color"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- RadioGroup para o Tipo de Evento -->
+        <RadioGroup
+            android:id="@+id/radioGroupTipoEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonEventoSimples"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Evento Simples" />
+
+            <RadioButton
+                android:id="@+id/radioButtonEventoCompleto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Evento com Entrada e Saída"
+                android:checked="true" />
+        </RadioGroup>
+
+        <!-- Opções de contagem de participantes (visível apenas para eventos com entrada e saída) -->
+        <LinearLayout
+            android:id="@+id/layoutContagemParticipantes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contagem de Participantes: "
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupContagemParticipantes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonParticipantesUnicos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Únicos" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonNumeroEntradas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Número de Entradas" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Botão para Adicionar Evento -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAdicionarEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adicionar Evento"
+            android:textColor="@android:color/white"
+            app:icon="@drawable/ic_add_event"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconTint="@android:color/white"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"
+            app:cornerRadius="12dp"
+            android:contentDescription="Botão para adicionar novo evento"/>
+    </LinearLayout>
+</ScrollView>

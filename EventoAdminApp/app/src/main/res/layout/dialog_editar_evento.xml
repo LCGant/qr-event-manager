@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialogEditarEvento"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- EditText para o Nome do Evento -->
+        <EditText
+            android:id="@+id/editTextNomeEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome do Evento"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- EditText para a Data do Evento -->
+        <EditText
+            android:id="@+id/editTextDataEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="Data do Evento (dd/MM/yyyy)"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- EditText para a Descrição do Evento -->
+        <EditText
+            android:id="@+id/editTextDescricaoEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descrição do Evento"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:layout_marginBottom="16dp" />
+
+        <!-- CheckBox para definir limite de participantes -->
+        <CheckBox
+            android:id="@+id/checkBoxLimiteParticipantes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Definir limite de participantes"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Campo para o número máximo de participantes, visível somente se o CheckBox for marcado -->
+        <EditText
+            android:id="@+id/editTextMaxParticipantes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número máximo de participantes"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone" />
+
+        <!-- RadioGroup para selecionar o Tipo do Evento -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Evento:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupTipoEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonEventoSimples"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Evento Simples" />
+
+            <RadioButton
+                android:id="@+id/radioButtonEventoCompleto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Evento Completo"
+                android:layout_marginStart="16dp" />
+        </RadioGroup>
+
+        <!-- Opções de contagem de participantes (visível apenas para eventos com entrada e saída) -->
+        <LinearLayout
+            android:id="@+id/layoutContagemParticipantes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contagem de Participantes:"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupContagemParticipantes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonParticipantesUnicos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Únicos" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonNumeroEntradas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Número de Entradas"
+                    android:layout_marginStart="16dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
