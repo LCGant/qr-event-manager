@@ -53,10 +53,10 @@ Ambos os apps usam **Android Jetpack**, banco local **SQLite** (via `SQLiteOpenH
   </tr>
   <tr>
     <td align="center">
-      <img src="docs/showcase_admin.jpeg" alt="App Organizadora" width="300" />
+      <img src="docs/showcase_admin.png" alt="App Organizadora" width="300" />
     </td>
     <td align="center">
-      <img src="docs/showcase_user.jpeg" alt="App Participante" width="300" />
+      <img src="docs/showcase_user.png" alt="App Participante" width="300" />
     </td>
   </tr>
 </table>
